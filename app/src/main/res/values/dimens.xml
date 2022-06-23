@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_all_standard">16dp</dimen>
+    <dimen name="margin_fab">8dp</dimen>
+    <dimen name="padding_recycler">5dp</dimen>
+    <dimen name="elevation">8dp</dimen>
+    <dimen name="max_image_size">40dp</dimen>
+    <dimen name="layout_percent">0.7</dimen>
+</resources>
