@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Code box</string>
-    <string name="name">Name</string>
-    <string name="permition_ok">Permission given</string>
-    <string name="permition_no">Not allowed</string>
-</resources>
