@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Code box</string>
+
+    <string name="error_msg_no_internet">Not connected to internet</string>
+    <string name="error_msg_unknown">An unexpected error occurred</string>
+    <string name="error_msg_timeout">The server took too long to respond</string>
+
+    <string name="text_exam">1</string>
+    <string name="text_event_exams">Are you ready for exams?</string>
+    <string name="colon_exam">:</string>
+    <string name="event_dey_text">Days</string>
+    <string name="event_hour_text">Hours</string>
+    <string name="event_minute_text">Minutes</string>
+    <string name="text_watch">🕒 8:00 – 8:45</string>
+    <string name="text_watch_for_adapter">🕒 %1$s</string>
+    <string name="history">History</string>
+    <string name="open_in">Open in</string>
+    <string name="literature">Literature</string>
+    <string name="days_left">🕒 2 days left</string>
+    <string name="days_left_for_adapter">🕒 %1$d days left</string>
+    <string name="read_scenes_1_1_1_12_of_the_master_and_margarita">Read scenes 1.1–1.12 of The Master and Margarita.</string>
+    <string name="physical_education">Physical Education</string>
+    <string name="teacher_mr_barros">Teacher: Mr Barros</string>
+    <string name="championship_in_los_angeles">Intensive preparation for The Junior World Championship in Los Angeles</string>
+    <string name="home">Home</string>
+    <string name="classes">Classes</string>
+    <string name="home_work">Homework</string>
+    <string name="favorite">Favorite</string>
+    <string name="hi_mike">Hi, Mike!</string>
+    <string name="_6_classes_today">6 classes today</string>
+    <string name="classes_today_for_fragment">%1$d classes today</string>
+    <string name="today_1_june">Today, 1 June</string>
+    <string name="today_for_fragment">Today, %1$s</string>
+    <string name="_8_00_8_25">8:00 – 8:25</string>
+    <string name="it_s_still_empty_here">it\'s still empty here</string>
+</resources>

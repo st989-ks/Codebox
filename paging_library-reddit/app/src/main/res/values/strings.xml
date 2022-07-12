@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Code box</string>
+
+    <string name="vote_count_label_fragment">Vote count: %1$s</string>
+
+    <string name="overview_text_string">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet interdum orci, at sagittis mauris. Donec a malesuada est, in viverra sem.</string>
+
+
+    <string name="error_msg_no_internet">Not connected to internet</string>
+    <string name="error_msg_unknown">An unexpected error occurred</string>
+    <string name="error_msg_timeout">The server took too long to respond</string>
+    <string name="stars">11</string>
+    <string name="retry">retry</string>
+</resources>

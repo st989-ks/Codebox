@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Code box</string>
+    <string name="name">Name</string>
+    <string name="poster_desc">Poster</string>
+    <string name="action_search">Search</string>
+
+    <string name="vote_count_label">Vote count: 105</string>
+    <string name="vote_count_label_fragment">Vote count: %1$s</string>
+
+    <string name="vote_average_label">Vote average: 3.5</string>
+    <string name="vote_average_label_fragment">Vote average: %1$s</string>
+
+    <string name="original_lang_label">Original Language: EN</string>
+    <string name="original_lang_label_fragment">Original language: %1$s</string>
+
+    <string name="overlay">Overlay</string>
+    <string name="text_point_for_fragment">%1$s  х  %2$s</string>
+    <string name="overview_text_string">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet interdum orci, at sagittis mauris. Donec a malesuada est, in viverra sem.</string>
+    <string name="search_result_title_text">Amphibia</string>
+    <string name="actor_text">Sarah Jessica Parker Ijenfhfh</string>
+    <string name="error_msg_no_internet">Not connected to internet</string>
+    <string name="error_msg_unknown">An unexpected error occurred</string>
+    <string name="error_msg_timeout">The server took too long to respond</string>
+</resources>

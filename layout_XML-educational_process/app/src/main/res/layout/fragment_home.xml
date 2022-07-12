@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_blue_background"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <TextView
+        android:id="@+id/title_hello"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_max_standard"
+        android:text="@string/hi_mike"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_top_home"
+        app:layout_constraintEnd_toStartOf="@id/search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="@dimen/menu_icon_size"
+        android:layout_height="@dimen/menu_icon_size"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_max_standard"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_top_home"
+        app:layout_constraintEnd_toStartOf="@+id/filter_icon"
+        app:layout_constraintStart_toEndOf="@id/title_hello"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_search"
+        app:tint="@color/white"/>
+
+    <ImageView
+        android:id="@+id/filter_icon"
+        android:layout_width="@dimen/menu_icon_size"
+        android:layout_height="@dimen/menu_icon_size"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_max_standard"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_top_home"
+        app:layout_constraintEnd_toStartOf="@+id/user_profile"
+        app:layout_constraintStart_toEndOf="@id/search"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_filter"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/user_profile"
+        android:layout_width="@dimen/layout_image"
+        android:layout_height="@dimen/layout_image"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_max_standard"
+        android:layout_marginEnd="@dimen/margin_all_standard"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_top_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/filter_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_6"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_top_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="title_hello,search,filter_icon,user_profile" />
+
+    <include
+        android:id="@+id/reminder_card"
+        layout="@layout/element_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_all_standard"
+        android:layout_marginEnd="@dimen/margin_all_standard"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@id/classes_today"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_top_home" />
+
+    <TextView
+        android:id="@+id/classes_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_little_standard"
+        android:text="@string/classes"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/recycler_classes_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminder_card" />
+
+    <TextView
+        android:id="@+id/value_classes_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_little_standard"
+        android:layout_marginEnd="@dimen/margin_all_standard"
+        android:gravity="center"
+        android:text="@string/_6_classes_today"
+        android:textColor="@color/color_text_watch"
+        android:textSize="@dimen/text_size_watch"
+        app:layout_constraintBottom_toTopOf="@id/recycler_classes_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminder_card" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_classes_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_image"
+        android:layout_marginTop="@dimen/margin_little_standard"
+        android:layout_marginEnd="@dimen/margin_image"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/homework_today"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classes_today"
+        tools:listitem="@layout/element_classes" />
+
+    <TextView
+        android:id="@+id/homework_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_little_standard"
+        android:text="@string/home_work"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/recycler_homework_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_classes_card" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_homework_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_little_standard"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homework_today"
+        tools:listitem="@layout/element_homework" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="max_image_size">40dp</dimen>
+    <dimen name="margin_start_recycler">30dp</dimen>
+    <dimen name="button_marginTop">20dp</dimen>
+    <dimen name="margin_all_standard">16dp</dimen>
+    <dimen name="padding">12dp</dimen>
+    <dimen name="margin_fab">8dp</dimen>
+    <dimen name="margin_recycler">5dp</dimen>
+    <dimen name="elevation">4dp</dimen>
+
+    <dimen name="text_size_big">24sp</dimen>
+    <dimen name="text_size_name">20sp</dimen>
+    <dimen name="text_size_more_normal">18sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_point">8sp</dimen>
+    <dimen name="width_actor">120dp</dimen>
+    <dimen name="width_movies">200dp</dimen>
+    <dimen name="Image_button_margin_top">100dp</dimen>
+    <dimen name="min_height_pocter">300dp</dimen>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.map.MapMapFragment">
+
+    <com.yandex.mapkit.mapview.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_display_list"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/user_location_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_fab"
+        app:elevation="@dimen/elevation"
+        app:layout_constraintBottom_toTopOf="@+id/btn_display_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/max_image_size"
+        app:tint="@color/transparent"
+        android:tintMode="add"
+        app:srcCompat="@drawable/ic_location_not_found"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btn_display_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/display_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

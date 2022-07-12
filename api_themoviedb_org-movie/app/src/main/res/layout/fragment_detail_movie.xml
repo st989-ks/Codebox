@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.MovieDetailFragment">
+
+    <ImageView
+        android:id="@+id/backdrop_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/poster_desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/amphibia_poster" />
+
+    <ImageView
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.6"
+        android:scaleType="centerCrop"
+        android:background="@android:color/background_dark"
+        android:contentDescription="@string/overlay"
+        app:layout_constraintBottom_toBottomOf="@+id/backdrop_image_view"
+        app:layout_constraintEnd_toEndOf="@+id/backdrop_image_view"
+        app:layout_constraintStart_toStartOf="@+id/backdrop_image_view"
+        app:layout_constraintTop_toTopOf="@+id/backdrop_image_view" />
+
+    <ImageView
+        android:id="@+id/poster_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_fab"
+        android:contentDescription="@string/poster_desc"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/backdrop_image_view"
+        app:layout_constraintEnd_toEndOf="@+id/backdrop_image_view"
+        app:layout_constraintStart_toStartOf="@+id/backdrop_image_view"
+        app:layout_constraintTop_toTopOf="@+id/backdrop_image_view"
+        tools:srcCompat="@drawable/amphibia_poster" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_start">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_fab"
+                android:textSize="@dimen/text_size_big"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Movie Title" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/vote_count_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:layout_marginTop="@dimen/margin_fab"
+                android:progressTint="@color/gold"
+                android:rating="3.5"
+                android:secondaryProgressTint="@color/red"
+                android:stepSize=".1"
+                app:layout_constraintBottom_toTopOf="@+id/vote_average_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_movie_title" />
+
+            <TextView
+                android:id="@+id/vote_average_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_fab"
+                android:text="@string/vote_average_label"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vote_count_rating" />
+
+            <TextView
+                android:id="@+id/vote_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_fab"
+                android:text="@string/vote_count_label"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vote_average_label" />
+
+            <TextView
+                android:id="@+id/original_lang_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_fab"
+                android:text="@string/original_lang_label"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vote_count_label" />
+
+            <TextView
+                android:id="@+id/overview_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_fab"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_more_normal"
+                app:layout_constraintBottom_toTopOf="@+id/recycler_actor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/original_lang_label"
+                tools:text="@string/overview_text_string" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_actor"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_fab"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/overview_text"
+                tools:listitem="@layout/recycler_actor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

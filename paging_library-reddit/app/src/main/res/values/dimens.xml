@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="max_image_size">40dp</dimen>
+    <dimen name="margin_start_recycler">30dp</dimen>
+    <dimen name="margin_all_standard">16dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="margin_recycler">5dp</dimen>
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="size_icons">30dp</dimen>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Code box</string>
+    <string name="text_point_for_fragment">%1$s  х  %2$s</string>
+    <string name="the_label_is_no_saved">Что-то происходит не так как надо</string>
+    <string name="ok">Хорошо</string>
+    <string name="permission_ok">Permission given</string>
+    <string name="permission_no">Not allowed</string>
+    <string name="manual_text">Приветствую!\n\nКак задать маршрут:\n 1. Первый длинный тап по карте - начальная точка (машинка)\n 2. Второй длинный тап по карте – конечная точка (флажок)\n 3. Третий длинный тап сбрасывает все и ставить точку старта\n\nМожно задать маршрут через всю карту, для этого необходимо нажать на машинку на выпадающей кнопки в правом нижнем углу.\n\nКогда маршрут задан кликай по машинке и она поедет</string>
+
+</resources>

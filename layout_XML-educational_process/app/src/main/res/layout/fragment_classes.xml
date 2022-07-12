@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_blue_background"
+    tools:context=".ui.fragment.ClassesFragment">
+
+    <TextView
+        android:id="@+id/title_class"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_max_standard"
+        android:text="@string/classes"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_top_classes"
+        app:layout_constraintEnd_toStartOf="@id/search_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/search_2"
+        android:layout_width="@dimen/menu_icon_size"
+        android:layout_height="@dimen/menu_icon_size"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_max_standard"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_top_classes"
+        app:layout_constraintEnd_toStartOf="@+id/view_list"
+        app:layout_constraintStart_toEndOf="@id/title_class"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_search"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/view_list"
+        android:layout_width="@dimen/menu_icon_size"
+        android:layout_height="@dimen/menu_icon_size"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_max_standard"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_top_classes"
+        app:layout_constraintEnd_toStartOf="@+id/view_tiles"
+        app:layout_constraintStart_toEndOf="@id/search_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_view_list"
+        app:tint="@color/green" />
+
+    <ImageView
+        android:id="@+id/view_tiles"
+        android:layout_width="@dimen/menu_icon_size"
+        android:layout_height="@dimen/menu_icon_size"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:layout_marginTop="@dimen/margin_max_standard"
+        android:layout_marginEnd="@dimen/margin_all_standard"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_top_classes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_list"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_view_tiles"
+        app:tint="@color/white" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_top_classes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="title_class,search_2,view_list,view_tiles" />
+
+    <TextView
+        android:id="@+id/date_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:text="@string/today_1_june"
+        android:textColor="@color/color_text_watch"
+        android:textSize="@dimen/text_size_watch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier_top_classes" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_classes_education_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_little_standard"
+        android:layout_marginTop="@dimen/margin_little_standard"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_today"
+        tools:listitem="@layout/recycler_element" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

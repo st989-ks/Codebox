@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:endColor="@color/gradient_end_background_icon_menu"
+                android:startColor="@color/gradient_start_background_icon_menu" />
+            <corners android:radius="@dimen/radius_background_icon_menu" />
+        </shape>
+    </item>
+</selector>

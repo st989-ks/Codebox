@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:outlineSpotShadowColor="@color/shadow_color_card"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="25dp"
+    app:cardPreventCornerOverlap="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/green_gradient_background">
+
+        <TextView
+            android:id="@+id/title_event_date"
+            style="@style/TextExamStyle"
+            android:text="@string/text_event_exams"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="event_date_one_text,event_date_two_text,event_date_three_text,event_date_four_text,event_date_five_text,event_date_six_text" />
+
+        <TextView
+            android:id="@+id/event_date_one_text"
+            style="@style/CardExamTimeStyle"
+            android:text="@string/text_exam"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_top_dey"
+            app:layout_constraintEnd_toStartOf="@+id/event_date_two_text"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_event_date" />
+
+        <TextView
+            android:id="@+id/event_date_two_text"
+            style="@style/CardExamTimeStyle"
+            android:text="@string/text_exam"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_top_dey"
+            app:layout_constraintEnd_toStartOf="@+id/colon_one"
+            app:layout_constraintStart_toEndOf="@+id/event_date_one_text"
+            app:layout_constraintTop_toBottomOf="@+id/title_event_date" />
+
+        <ImageView
+            android:id="@+id/colon_one"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/event_date_three_text"
+            app:layout_constraintStart_toEndOf="@+id/event_date_two_text"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_top"
+            android:src="@drawable/colon" />
+
+        <TextView
+            android:id="@+id/event_date_three_text"
+            style="@style/CardExamTimeStyle"
+            android:text="@string/text_exam"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_top_dey"
+            app:layout_constraintEnd_toStartOf="@+id/event_date_four_text"
+            app:layout_constraintStart_toEndOf="@+id/colon_one"
+            app:layout_constraintTop_toBottomOf="@+id/title_event_date" />
+
+        <TextView
+            android:id="@+id/event_date_four_text"
+            style="@style/CardExamTimeStyle"
+            android:text="@string/text_exam"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_top_dey"
+            app:layout_constraintEnd_toStartOf="@+id/colon_two"
+            app:layout_constraintStart_toEndOf="@+id/event_date_three_text"
+            app:layout_constraintTop_toBottomOf="@+id/title_event_date" />
+
+        <ImageView
+            android:id="@+id/colon_two"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/event_date_five_text"
+            app:layout_constraintStart_toEndOf="@+id/event_date_four_text"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_top"
+            android:src="@drawable/colon" />
+
+        <TextView
+            android:id="@+id/event_date_five_text"
+            style="@style/CardExamTimeStyle"
+            android:text="@string/text_exam"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_top_dey"
+            app:layout_constraintEnd_toStartOf="@+id/event_date_six_text"
+            app:layout_constraintStart_toEndOf="@+id/colon_two"
+            app:layout_constraintTop_toBottomOf="@+id/title_event_date" />
+
+        <TextView
+            android:id="@+id/event_date_six_text"
+            style="@style/CardExamTimeStyle"
+            android:text="@string/text_exam"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_top_dey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/event_date_five_text"
+            app:layout_constraintTop_toBottomOf="@+id/title_event_date" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="event_date_one_text,event_date_two_text,event_date_three_text,event_date_four_text,event_date_five_text,event_date_six_text" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_top_dey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="event_dey,event_hour,event_minute" />
+
+        <TextView
+            android:id="@+id/event_dey"
+            style="@style/TextWhenStyle"
+            android:text="@string/event_dey_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/event_date_two_text"
+            app:layout_constraintStart_toStartOf="@+id/event_date_one_text"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_bottom" />
+
+        <TextView
+            android:id="@+id/event_hour"
+            style="@style/TextWhenStyle"
+            android:text="@string/event_hour_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/event_date_four_text"
+            app:layout_constraintStart_toStartOf="@+id/event_date_three_text"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_bottom" />
+
+        <TextView
+            android:id="@+id/event_minute"
+            style="@style/TextWhenStyle"
+            android:text="@string/event_minute_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/event_date_six_text"
+            app:layout_constraintStart_toStartOf="@+id/event_date_five_text"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_bottom" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

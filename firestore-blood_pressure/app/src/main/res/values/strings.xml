@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Code box</string>
+    <string name="upper_blood_pressure">Upper</string>
+    <string name="lower_blood_pressure">Lower</string>
+    <string name="pulse">Pulse</string>
+    <string name="cancel">CANCEL</string>
+    <string name="save">SAVE</string>
+    <string name="pressure_120">120</string>
+    <string name="pressure_80">80</string>
+    <string name="pulse_60">60</string>
+    <string name="slash">/</string>
+    <string name="_8_10">8:10</string>
+    <string name="_25">25 октября</string>
+    <string name="throwable_lower_blood_pressure">не введено нижнее давление</string>
+    <string name="throwable_upper_blood_pressure">не введено верхнее давление</string>
+    <string name="throwable_pulse">не введен пульс</string>
+    <string name="something_went_wrong">Что-то пошло не так</string>
+    <string name="deletet">Запись удалена</string>
+</resources>

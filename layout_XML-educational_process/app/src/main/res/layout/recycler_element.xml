@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_blue_background">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_all_standard"
+        android:background="@color/blue_green_50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/circle_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_little_standard"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/line"
+        app:layout_constraintStart_toStartOf="@id/line"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle_big_background" />
+
+    <ImageView
+        android:id="@+id/circle_little"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/circle_big"
+        app:layout_constraintEnd_toEndOf="@id/circle_big"
+        app:layout_constraintStart_toStartOf="@id/circle_big"
+        app:layout_constraintTop_toTopOf="@+id/circle_big"
+        app:srcCompat="@drawable/circle_little_background" />
+
+    <TextView
+        android:id="@+id/time_when"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_big_standard"
+        android:text="@string/_8_00_8_25"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/circle_big"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/circle_big" />
+
+    <include
+        android:id="@+id/card_classes"
+        layout="@layout/element_classes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_all_standard"
+        android:layout_marginBottom="@dimen/margin_all_standard"
+        android:layout_marginStart="@dimen/margin_big_standard"
+        android:layout_marginTop="@dimen/text_margin_classes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toBottomOf="@+id/time_when" />
+
+    <include
+        android:id="@+id/card_education"
+        layout="@layout/element_education"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_all_standard"
+        android:layout_marginBottom="@dimen/margin_big_standard"
+        android:layout_marginStart="@dimen/margin_big_standard"
+        android:layout_marginTop="@dimen/text_margin_classes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toBottomOf="@+id/time_when" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

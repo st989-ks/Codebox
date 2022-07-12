@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_all_standard">
+
+        <EditText
+            android:id="@+id/upper_blood_pressure_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/pressure_120"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/dash"
+            app:layout_constraintEnd_toStartOf="@+id/dash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dash" />
+
+        <TextView
+            android:id="@+id/dash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slash"
+            app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+            app:layout_constraintEnd_toStartOf="@+id/lower_blood_pressure_edit_text"
+            app:layout_constraintStart_toEndOf="@+id/upper_blood_pressure_edit_text"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <EditText
+            android:id="@+id/lower_blood_pressure_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:hint="@string/pressure_80"
+            app:layout_constraintBottom_toBottomOf="@+id/dash"
+            app:layout_constraintEnd_toStartOf="@+id/icon_heart"
+            app:layout_constraintStart_toEndOf="@+id/dash"
+            app:layout_constraintTop_toTopOf="@+id/dash" />
+
+        <ImageView
+            android:id="@+id/icon_heart"
+            android:layout_width="@dimen/icon_size_little"
+            android:layout_height="@dimen/icon_size_little"
+            app:layout_constraintBottom_toBottomOf="@+id/dash"
+            app:layout_constraintEnd_toStartOf="@+id/pulse_edit_text"
+            app:layout_constraintStart_toEndOf="@+id/lower_blood_pressure_edit_text"
+            app:layout_constraintTop_toTopOf="@+id/dash"
+            app:srcCompat="@drawable/heart"
+            app:tint="@color/red" />
+
+
+        <EditText
+            android:id="@+id/pulse_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:hint="@string/pulse_60"
+            app:layout_constraintBottom_toBottomOf="@+id/dash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon_heart"
+            app:layout_constraintTop_toTopOf="@+id/dash" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="icon_heart,dash,upper_blood_pressure_edit_text,lower_blood_pressure_edit_text,pulse_edit_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_all_standard"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_yes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_bottom" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_all_standard"
+            android:backgroundTint="@color/gold"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_bottom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

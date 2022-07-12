@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Code box</string>
+    <string name="name">Name</string>
+    <string name="point">23.34534523434 x 43.23424232434</string>
+    <string name="permission_ok">Permission given</string>
+    <string name="permission_no">Not allowed</string>
+    <string name="display_list">Отобразить список</string>
+    <string name="save">Сохранить</string>
+    <string name="delete">Удалить метку</string>
+    <string name="text_point_for_fragment">%1$s  х  %2$s</string>
+    <string name="the_label_is_saved">Метка сохранена</string>
+    <string name="the_label_is_no_saved">Что-то происходит не так как надо</string>
+</resources>
