@@ -1,6 +1,7 @@
 package com.pipe.codebox.ui.adapter
 
 import android.app.Application
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import com.pipe.codebox.R
 import com.pipe.codebox.databinding.ProgressBarBinding
 import com.pipe.codebox.databinding.RecyclerMovieBinding
 import com.pipe.codebox.domain.entity.MovieEntity
+import com.pipe.codebox.extensions.APP_TAG
 import com.squareup.picasso.Picasso
 import javax.inject.Inject
 
@@ -91,21 +93,20 @@ class ListMovieAdapter @Inject constructor(
     inner class LocationPointsViewHolder(binding: RecyclerMovieBinding) :
         RecyclerView.ViewHolder(binding.root) {
         var itemRowBinding: RecyclerMovieBinding = binding
-        fun bind(
-            loc: MovieEntity,
-        ) {
-            itemRowBinding.posterRecycler.apply {
-                if (loc.posterPath.isNullOrEmpty()) {
-                    this.setImageResource(R.drawable.notimgicon)
-                } else {
-                    Picasso.get().load(loc.posterPath).into(this)
+        fun bind(loc: MovieEntity) = with(itemRowBinding) {
+                posterRecycler.apply {
+                    Log.i(APP_TAG, loc.posterPath)
+                    if (loc.posterPath.isNullOrEmpty()) {
+                        this.setImageResource(R.drawable.notimgicon)
+                    } else {
+                        Picasso.get().load(loc.posterPath).into(this)
+                    }
                 }
-            }
-            itemRowBinding.voteCountRating.rating = loc.voteAverage.toFloat()
-            itemRowBinding.cardMovie.setOnClickListener { onContainerClickListener?.let { it(loc) } }
-            itemRowBinding.movieProgress.visibility = View.INVISIBLE
-            itemRowBinding.linearLayout2.visibility = View.VISIBLE
-            itemRowBinding.posterRecycler.visibility = View.VISIBLE
+                voteCountRating.rating = loc.voteAverage.toFloat()
+                cardMovie.setOnClickListener { onContainerClickListener?.let { it(loc) } }
+                movieProgress.visibility = View.INVISIBLE
+                linearLayout2.visibility = View.VISIBLE
+                posterRecycler.visibility = View.VISIBLE
         }
     }
 

@@ -12,6 +12,3 @@ const val WRITE_TIMEOUT: Long = 300
 
 const val BUNDLE_ID = "id"
 
-const val CHANNEL_ID_PERIOD_WORK = "PERIODIC_APP_UPDATES"
-const val TAG_PERIOD_WORK = "periodic-pending-notification"
-const val APPROVED = "APPROVED"
